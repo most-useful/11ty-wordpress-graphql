@@ -1,0 +1,67 @@
+---
+pagination:
+  data: posts
+  size: 1
+  alias: post
+permalink: /{{ post.slug }}.html
+bodyClass: single-post
+---
+
+{% extends "layouts/layout.njk" %}
+{%- block htmlTitle %}{{post.title | safe}}{%- endblock %}
+{%- block metaDescription %}{{post.summary | safe }}{%- endblock %}
+{% block readerBarStart %}
+  <div class="reader-bar-start">
+{% endblock %}
+{% block readerBarEnd %}
+  </div>
+  {% readerBar "10px", "#EDF2F7", "#3182ce" %}
+{% endblock %}
+
+{% block content %}
+  {# blogpost #}
+  <div class="faded-featured">
+    <div class="faded-featured-inner">
+      {% image post.image, post.imageAlt, "(max-width: 300px) 300px, (max-width: 600px) 600px, 100vw" %}
+    </div>
+  </div>
+  <div id="post-content">
+    <span class="post-categories">
+      {%- for category in post.categories %}
+        {% if loop.index > 1 %} | {% endif %}
+      <a href="/category/{{category.slug}}/">{{category.name}}</a>
+      {% endfor %}
+    </span>
+    <h1 class="page-title">{{ post.title | safe }}</h1>
+    <time class="post-time" datetime="{{ post.date | date('YYYY-MM-DD') }}">Last Updated: {{ post.date|date("dddd, Do MMMM YYYY") }}</time>
+    <span id="readingTime">About {{ post.body | readingTime }} reading time</span>
+    <div class="toc-wrapper">
+    {{ post.body | addHeaderIds | toc(wrapper='nav', wrapperClass='toc', headingText='Table of Contents:', headingTag='span') | safe }}
+    </div>
+    {{ post.body | addHeaderIds | safe }}
+  </div>
+  <div id="related-posts"><h2 class="no-inject">Related Posts:</h2></div>
+  {% if post.commentCount > 0 %}
+  <div id="comment-wrap">
+    <h2 id="comment-header">{{post.commentCount}} Comments<br/>(Oldest First)</h2>
+    {% for comment in post.comments %}
+      <div class="comment comment-depth-{{comment.depth}}">
+        <div class="comment-header">
+          {% image comment.authorGravatarUrl, "Author Gravatar", "60px", { "class": "alignleft, avatar" } %}
+          <div class="comment-meta">
+            <b class="comment-author-name">{{comment.authorName}}</b> says<br/>
+            <span class="comment-date">{{comment.date | date('dddd, Do MMMM YYYY')}} at {{comment.date | date('kk:mm')}}</span>
+          </div>
+          
+        </div>
+        {{ comment.content | safe }}
+      </div>
+    {% endfor %}
+  </div>
+  <div id="add-comment"><h2>Have Your Say:</h2>Unfortunately, new comments are presently disabled for technical reasons but they will return shortly!</div>
+  {% endif %}
+  <div id="related-posts">
+  </div>
+</div>
+
+{% endblock %}

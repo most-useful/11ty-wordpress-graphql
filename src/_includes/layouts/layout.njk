@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang=en-gb prefix="og: https://ogp.me/ns#" itemtype=https://schema.org/WebPage itemscope>
+    <head>
+        <meta charset="utf-8">
+        <title>{%- block htmlTitle %}Default Title{%- endblock %}</title>
+        {%- block styleSheets %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        {%- endblock %}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <meta name="description" content="{%- block metaDescription %}Bearded Dragon Care and Advice{%- endblock %}"/>
+    </head>
+    <body {%- if bodyClass %} class="{{- bodyClass }}"{%- endif %}>
+    {% block readerBarStart %}{% endblock %}
+        <div id="header-wrap">
+            <div id="header">
+                <div id="logo-wrap">
+                    <a href="/">
+                        {% image "./assets/images/default-logo-changeme.png", "Default 11ty-WP-GraphQL Logo", "80px", {id:"siteLogo"}%}
+                    </a>
+                    <div id="site-info-wrap">
+                        <p class="site-title">Default Site Title - change me in layout.njk</p><br/>
+                        <p class="site-tagline">Default Tagline, change me too</p>
+                    </div>
+                    
+                </div>
+                <div class="overlay" id="myTopnav">
+                    <div class="overlay-content">
+                        {%- block navMenu %}
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            MENU <span class="fas fa-bars"></span>
+                        </a>
+                        <a href="/categories/">Categories</a>
+                        <a href="/most-recent-posts/">Recent Posts</a>
+                        <a href="#" target="_new" class="button">A Random Demo Button</a>
+                        {%- endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div id="main">
+            {% block content %}
+            This is content
+            {% endblock %}
+            </div>
+        </main>
+        <footer>
+            {% block footer %}
+                <div id="footer-wrap" class="is-centered">
+                    <span class="footer-a"><a href="/">Home</a></span>
+                    <span class="footer-a"><a href="/about-us/">About Us</a></span>
+                    <span class="footer-a"><a href="/privacy/">Privacy</a></span>
+                </div>
+                <div id="copyright-block">
+                    Copyright &copy; 2021, <a href="https://www.most-useful.com/">Most Useful</a>. All Rights Reserved.
+                </div>
+            {% endblock %}
+        </footer>
+    {% block readerBarEnd %}{% endblock %}
+    <script src="/assets/js/scroll.js"></script>
+    {%- if config.useMatomo %}
+    <!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="{{- config.matomoUrl }}";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+<!-- Matomo Image Tracker-->
+<img referrerpolicy="no-referrer-when-downgrade" src="{{- config.matomoUrl }}/matomo.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+<!-- End Matomo -->
+</noscript>
+<!-- End Matomo Code -->
+{%- endif %}
+{%- if config.useGoogleAnalytics %}
+{%- if not config.googleAnalyticsCode %}
+<!-- CONFIG ERROR: You requested Google Analytics code but didn't provide any analytics property code in config.googleAnalyticsCode -->
+{%- else %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{- config.googleAnalyticsCode }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{- config.googleAnalyticsCode }}');
+</script>
+{%- endif %} {# not config.googleAnalyticsCode #}
+{%- endif %} {# config.useGoogleAnalytics #}
+    </body>
+</html>

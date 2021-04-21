@@ -1,0 +1,17 @@
+{
+    "imgSource": [
+        "http://look-for-images-embedded-in-posts-at-this-address.com",
+        "https://also-look-for-this-url-too.com"
+    ],
+    "graphqlUrl": "http://your-wordpress-installation.net/?graphql",
+    "urlRewriterUrls": [
+        "https://your-wordpress-installatuon.net/",
+        "http://aliases-for-your-wordpress-installation/"
+    ],
+    "useCache": false,
+    "useMatomo": false,
+    "matomoUrl": "https://address-of-your-matomo-server.com/",
+    "useGoogleAnalytics": false,
+    "googleAnalyticsCode": "UA-GA3SITEID",
+    "ignoreEmbeddedImages": true
+}

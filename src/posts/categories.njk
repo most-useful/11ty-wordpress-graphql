@@ -1,0 +1,39 @@
+---
+pagination:
+  data: categories
+  size: 11
+permalink: categories{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}{% endif %}/index.html
+siteTitle: "Bearded Dragons Rock Categories"
+---
+
+{% extends "layouts/layout.njk" %}
+
+{% block htmlTitle %}{{siteTitle}} || Page {{pagination.pageNumber + 1 }}{% endblock %}
+{%- block metaDescription %}{{siteTitle}}{%- endblock %}
+
+{% block content %}
+  <h1 class="page-title">All Categories</h1>
+
+  {# loop through paginated item #}
+  {% for item in pagination.items %}
+    {% if item.count %}
+        <div class="category-data {%- if loop.index % 2 == 0 %} alt-row{%- endif %}">
+          <h2 class="category-name"><a class="category-name" href="/category/{{item.slug}}/">{{ item.name }} ({{item.count}})</a></h2>
+          <div class="category-description">{{ item.description | safe }}</div>
+        </div>
+    {% endif %}
+  {% endfor %}
+
+  {# pagination #}
+  {% if pagination.hrefs | length > 0 %}
+  <div id="pagination">
+    {% if pagination.href.previous %}
+      <a class="button" href="{{ pagination.href.previous }}">Previous page</a></li>
+    {% endif %}
+    {% if pagination.href.next %}
+      <a class="button" href="{{ pagination.href.next }}">Next page</a></li>
+    {% endif %}
+  </div>
+  {% endif %}
+
+{% endblock %}

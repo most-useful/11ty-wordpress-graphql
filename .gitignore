@@ -1,0 +1,8 @@
+node_modules
+_site
+.cache
+img
+.remote-image-cache
+config.json
+autoinject.json
+public_html

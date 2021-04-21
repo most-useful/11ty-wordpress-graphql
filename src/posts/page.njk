@@ -1,0 +1,19 @@
+---
+pagination:
+  data: pages
+  size: 1
+  alias: bdrPage
+permalink: /{{ bdrPage.slug }}/index.html
+bodyClass: single-bdrPage
+siteTitle: Bearded Dragons Rock, up to date advice on how to care for your bearded dragon
+---
+{% extends "layouts/layout.njk" %}
+{%- block htmlTitle %}{{bdrPage.title}}{%- endblock %}
+{%- block metaDescription %}{{bdrPage.title | safe}} at {{siteTitle}}{%- endblock %}
+{% block content %}
+  <div id="page-content">
+    <h1 class="page-title">{{ bdrPage.title }}</h1>
+    {{ bdrPage.body | safe }}
+  </div>
+</div>
+{% endblock %}

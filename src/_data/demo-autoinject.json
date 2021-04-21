@@ -1,0 +1,111 @@
+[
+    {
+        "tag": "h2",
+        "tagCounter": 1,
+        "repeatEvery": 0,
+        "position": "beforebegin",
+        "adCode": "<!-- Ezoic - Above P1 - under_page_title -->\n<div id=\"ezoic-pub-ad-placeholder-178\"> </div>\n<!-- End Ezoic - Above P1 - under_page_title -->"
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 2,
+        "repeatEvery": 0,
+        "adCode": "<!-- Ezoic - Above P2 - under_second_paragraph --><div id=\"ezoic-pub-ad-placeholder-179\"> </div><!-- End Ezoic - Above P2 - under_second_paragraph -->",
+        "position": "beforebegin"
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 3,
+        "repeatEvery": 0,
+        "adCode": "<!-- Ezoic - Above P3 - longer_content --><div id=\"ezoic-pub-ad-placeholder-180\"> </div><!-- End Ezoic - Above P3 - longer_content -->",
+        "position": "beforebegin"
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 4,
+        "repeatEvery": 0,
+        "adCode":"<!-- Ezoic - Above P4 - longest_content --><div id=\"ezoic-pub-ad-placeholder-181\"> </div><!-- End Ezoic - Above P4 - longest_content -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 5,
+        "repeatEvery": 0,
+        "adCode":"<!-- Ezoic - Above P5 - incontent_5 --><div id=\"ezoic-pub-ad-placeholder-182\"> </div><!-- End Ezoic - Above P5 - incontent_5 -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 6,
+        "repeatEvery": 0,
+        "adCode":"<!-- Ezoic - Above P6 - incontent_6 --><div id=\"ezoic-pub-ad-placeholder-183\"> </div><!-- End Ezoic - Above P6 - incontent_6 -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 7,
+        "repeatEvery": 0,
+        "adCode":"<!-- Ezoic - Above P7 - incontent_7 --><div id=\"ezoic-pub-ad-placeholder-184\"> </div><!-- End Ezoic - Above P7 - incontent_7 -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 8,
+        "repeatEvery": 0,
+        "adCode": "<!-- Ezoic - Above P8 - incontent_8 --><div id=\"ezoic-pub-ad-placeholder-185\"> </div><!-- End Ezoic - Above P8 - incontent_8 -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 9,
+        "repeatEvery": 0,
+        "adCode":"<!-- Ezoic - incontent_9 - incontent_9 --><div id=\"ezoic-pub-ad-placeholder-186\"> </div><!-- End Ezoic - incontent_9 - incontent_9 -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 10,
+        "repeatEvery": 0,
+        "adCode":"<!-- Ezoic - incontent_10 - incontent_10 --><div id=\"ezoic-pub-ad-placeholder-187\"> </div><!-- End Ezoic - incontent_10 - incontent_10 -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 11,
+        "repeatEvery": 0,
+        "adCode":"<!-- Ezoic - incontent_11 - incontent_11 --><div id=\"ezoic-pub-ad-placeholder-188\"> </div><!-- End Ezoic - incontent_11 - incontent_11 -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "h2",
+        "tagCounter": 12,
+        "repeatEvery": 0,
+        "adCode":"<!-- Ezoic - Before Comments - incontent_12 --><div id=\"ezoic-pub-ad-placeholder-189\"> </div><!-- End Ezoic - Before Comments - incontent_12 -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "div#footer-wrap",
+        "tagCounter": 1,
+        "repeatEvery": 0,
+        "adCode":"<!-- Ezoic - bottom_of_page - bottom_of_page --><div id=\"ezoic-pub-ad-placeholder-190\"> </div><!-- End Ezoic - bottom_of_page - bottom_of_page -->",
+        "position": "beforebegin"
+
+    },
+    {
+        "tag": "h3",
+        "tagCounter": 4,
+        "repeatEvery": 3,
+        "adCode": "<!-- Demo h3 from 4 every 3 -->",
+        "position": "afterend"
+    }
+
+]

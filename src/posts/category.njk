@@ -1,0 +1,32 @@
+---
+pagination:
+  data: individualCategory
+  size: 1
+  alias: category
+permalink: category/{{ category.categorySlug }}/index.html
+siteTitle: "Bearded Dragons Rock"
+---
+
+{% extends "layouts/layout.njk" %}
+
+{% block htmlTitle %}{{category.categoryName}} || {{siteTitle}}{% endblock %}
+{%- block metaDescription %}{{category.categoryName}} - {{siteTitle}}{%- endblock %}
+{% block content %}
+
+    <h1 class="page-title">{{category.categoryName}}</h1>
+    <div id="category-wrap">
+    {% for post in category.posts %}
+      <article class="category-list post-entry">
+        <a href="/{{post.slug}}.html">
+          {% image post.featuredImage.node.sourceUrl, post.featuredImage.node.altText, "(max-width: 300px) 300px, (max-width: 600px) 600px, 100vw" %}
+        </a>
+        <div class="post-data">
+          <h2 class="post-title"><a class="post-title" href="/{{post.slug}}.html">{{ post.title | safe}}</a></h2>
+          <time class="post-time" datetime="{{ post.date | date('YYYY-MM-DD') }}">{{ post.date|date("dddd, Do MMMM YYYY") }}</time>
+          <div class="post-summary">{{ post.excerpt | safe }}</div>
+          <p><a class="more" href="/{{post.slug}}.html">Read More &rArr;</a></p>
+        </div>
+      </article>
+    {% endfor %}
+    </div>
+{% endblock %}

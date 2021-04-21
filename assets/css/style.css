@@ -1,0 +1,687 @@
+
+/** Defaults - Think MOBILE though */
+body {
+	background-color: #fff;
+	font-family: 'FontAwesome', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	min-width: 350px;
+	margin: 0px;
+}
+
+div#comment-wrap {
+	background-color: white;
+	max-width: 100%;
+	overflow-y: hidden;
+}
+
+div.comment {
+	border-top-color: #ddd;
+	border-top-style: dashed;
+	padding: 20px 0px 10px 0px;
+}
+div.comment-depth-1 {
+	border-top-color: #aaa;
+	border-top-style: double;
+}
+
+div.comment-depth-2 {
+	margin-left: 20px;
+}
+
+div.comment-depth-3 {
+	margin-left: 40px;
+
+}
+
+div.comment-depth-4 {
+	margin-left: 60px;
+
+}
+
+div.comment-header {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+}
+
+b.comment-author-name {
+	font-size: 1.125em;
+	text-transform: capitalize;
+}
+
+span.comment-date {
+	font-size: 0.75em;
+	display: block;
+}
+
+div.toc-wrapper {
+	background-color: #EDF2F7;
+	margin-top: 0px;
+	padding: 20px;
+	font-size: 0.8em;
+}
+
+div.toc-wrapper a {
+	color: #000;
+	text-decoration: none;
+}
+
+div.toc-wrapper a:hover {
+	color: #3182ce;
+	text-decoration: underline;
+}
+nav.toc {
+	margin-left: -20px;
+}
+
+div.toc-wrapper ol {
+	list-style-type: none;
+	counter-reset: item;
+	margin-left: -15px;
+	margin-top: 5px;
+}
+
+div.toc-wrapper ol li:before {
+	content: counters(item, ".") " ";
+	counter-increment: item;
+}
+
+div.toc-wrapper ol li {
+	padding: 5px;
+}
+
+div.toc-wrapper span {
+	font-weight: 700;
+	font-size: 1.25em;
+}
+
+div.wp-block-image img {
+	max-width: 100%;
+}
+
+.wp-block-table table {
+    width: 100%;
+}
+
+.wp-block-image .aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+	width: auto;
+	margin-right: 20px;
+}
+
+.alignright {
+	float: right;
+	width: auto;
+	margin-left: 20px;
+}
+
+.wp-block-image .aligncenter, .wp-block-image .alignleft, .wp-block-image .alignright {
+    display: table;
+}
+
+.reader-bar-start #header-wrap {
+	top: 10px;
+}
+
+#header-wrap {
+	background-color: white;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 100;	/* WE want this on top always! */
+}
+
+#readerBarContainer {
+	top: 0px !important;
+}
+
+#readerBar {
+	top: 0px !important;
+}
+
+button#upBtn {
+	background-color: #3182ce !important;
+	width: 48px !important;
+	height: 48px !important;
+}
+
+span#readingTime {
+	display: inline-block;
+	background-color: #EDF2F7;
+	padding: 10px 20px;
+	font-size: 0.8em;
+}
+
+#main {
+	background-color: #EDF2F7;
+	padding: 1em;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+#mainContentWrap {
+	max-width: 1000px;
+	margin: -1em auto 0 auto;
+}
+
+img {
+	/*width: 100%;*/
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+img.avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+	border: 5px solid #eee;
+	margin-right: 15px;
+}
+
+h1.page-title {
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 0.5em;
+	max-width: 80%;
+}
+
+figcaption {
+	text-align: center;
+	font-size: 0.75em;
+}
+
+.kt-svg-icon-list-text {
+	margin: 10px;
+	vertical-align: top;
+}
+
+.kt-svg-icon-list li {
+	margin-top: 10px;
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('/assets/fonts/fa-solid-900.eot');
+	src: url('/assets/fonts/fa-solid-900.eot') format('embedded-opentype'),
+		url('/assets/fonts/fa-solid-900.woff2') format('woff2'),
+		url('/assets/fonts/fa-solid-900.woff') format('woff'),
+		url('/assets/fonts/fa-solid-900.ttf') format('truetype'),
+		url('/assets/fonts/fa-solid-900.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+  }
+
+  .fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+
+  .fa-bars:before {
+	content: "\f0c9";
+  }
+
+  a.button {
+	  display: block;
+	  border-radius: 5px;
+	  background-color: #3182ce;
+	  color: white;
+  }
+
+  a:hover, a.more:hover {
+	  color: #3182ce;
+  }
+
+  div#pagination {
+	  display: flex;
+	  flex-flow: row wrap;
+	  margin: 0 auto;
+	  justify-content: space-between;
+	  
+  }
+
+  div#pagination a {
+	  text-decoration: none;
+	  width: max-content;
+	  padding: 10px;
+	  font-size: 1.5em;
+  }
+
+  div#pagination a:hover {
+	  background-color: #718096;
+	  color: #fff;
+	  border-radius: 5px;
+  }
+
+  h2.category-name {
+	  text-align: center;
+  }
+
+  h2.category-name a {
+	color: #000;
+	text-decoration: none;
+  }
+
+  h2.category-name a:hover {
+	  color: #3182ce;
+  }
+
+  div.category-data {
+	  padding: 10px 15px 25px 15px;
+	  background-color: white;
+	  margin-bottom: 30px;
+	  border-radius: 10px;
+  }
+
+  .post-categories {
+	  display: inline-block;
+	  width: 100%;
+	  font-size: smaller;
+	  font-weight: 500;
+	  margin: 0 auto;
+	  text-align: center;
+  }
+
+  .post-categories a {
+	  color: black;
+	  text-decoration: none;
+  }
+
+  .post-categories a:hover {
+	  color: #3182ce;
+  }
+
+  div.rank-math-answer img {
+	  height: 150px;
+	  width: 150px;
+  }
+
+  h2.important-topics-heading {
+	  text-align: left;
+  }
+
+  ul#important-topics, ul.kt-svg-icon-list {
+	  list-style-type: none;
+  }
+
+  ul#important-topics li {
+	  padding: 10px 0px;
+  }
+
+  ul#important-topics a {
+	  text-decoration: none;
+	  color: #000;
+  }
+
+  ul#important-topics a:hover {
+	  text-decoration: underline;
+	  color: #3182ce;
+  }
+
+/* Add a black background color to the top navigation */
+
+  /* Style the links inside the navigation bar */
+  .overlay a {
+	float: left;
+	display: block;
+	color: #000;
+	text-align: center;
+	padding: 14px 14px;
+	text-decoration: none;
+	font-size: 16px;
+  }
+  
+  /* Change the color of links on hover */
+  .overlay a:hover {
+	color: black;
+	background-color: #718096;
+	border-radius: 5px;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .overlay a.active {
+	background-color: #3870b9;
+	color: #000;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .overlay .icon {
+	display: none;
+  }
+
+  #header {
+	  display: flex;
+	  flex-flow: row wrap;
+	  justify-content: space-between;
+	  align-items: center;
+	  max-width: 1000px;
+	  margin: 0 auto;
+  }
+
+  #logo-wrap {
+	width: max-content;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+  }
+
+  #siteLogo {
+	  float: left;
+  }
+
+  p.site-title {
+	  font-size: 1em;
+	  font-weight: 700;
+  }
+
+  .post-entry {
+	  background-color: white;
+	  margin-bottom: 4em;
+  }
+
+  .post-data {
+	  padding: 15px;
+  }
+
+  h2.post-title {
+	  font-weight: 600;
+  }
+
+  .post-title {
+	  text-decoration: none;
+	  color: black;
+  }
+
+  div.post-summary {
+	  font-size: 1.125em;
+  }
+
+  time.post-time {
+	  font-size: x-small;
+	  text-align: center;
+	  display: block;
+	  margin: 0px auto 20px auto;
+  }
+
+  a.more {
+	  text-decoration: none;
+	  color: black;
+	  font-weight: 600;
+	  font-size: 1.5em;
+  }
+
+  .single-post #main {
+	  background-color: transparent;
+  }
+
+  .single-post #post-content {
+	  position: relative;
+	  top: -4em;
+  }
+
+  .faded-featured-inner::after {
+	display: block;
+	position: relative;
+	background-image: linear-gradient(to bottom, transparent 0%, white 100%);
+	margin-top: -250px;
+	height: 250px;
+	width: 100%;
+	content: '';
+  }
+
+  .is-text-centered, .has-text-align-center {
+	  text-align: center;
+  }
+
+  .has-black-color, .has-black-color a {
+	color: black;
+	text-decoration: none;
+  }
+
+  .has-luminous-vivid-amber-background-color {
+	background-color: #fcb900;
+	padding: 15px;
+  }
+
+  .has-vivid-green-cyan-background-color {
+	padding: 15px;
+	background-color: #00d084;
+  }
+
+  .has-luminous-vivid-orange-background-color {
+	padding: 15px;
+	background-color: #ff6900;
+  }
+
+  .is-white {
+	  color: white;
+  }
+
+  .is-centered {
+	  margin: 0 auto;
+  }
+
+  .cover-block {
+	padding: 1em;
+	background-color: black; 
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url('/img/Rubin-on-Dark-Background-featured-1000w.jpeg');
+  }
+
+  span.footer-a {
+	  padding: 1em;
+	  margin: 0px 10px;
+	  width: 100px;
+	  text-align: center;
+  }
+
+  span.footer-a a {
+	  text-decoration: none;
+	  color: #2B6CB0;
+	  font-weight: 600;
+  }
+
+  #footer-wrap {
+	  height: 50px;
+	  background-color: #EDF2F7;
+	  width: 100%;
+	  font-size: 1.5em;
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 25px;
+  }
+
+#copyright-block {
+	text-align: center;
+	background-color: #3182ce;
+	width: 100%;
+	height: 50px;
+	font-size: 1.5em;
+	line-height: 50px;
+	font-weight: 500;
+}
+
+#copyright-block a {
+	text-decoration: none;
+	color: black;
+}
+
+.wp-block-embed__wrapper {
+	position: relative;
+    padding-bottom: 56.10%;
+    height: 0;
+    overflow: hidden;
+}
+
+.wp-block-embed__wrapper iframe,
+.wp-block-embed__wrapper object,
+.wp-block-embed__wrapper embed {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/** This applies to devices whose screens
+ *  are a MINIMUM of 801px */
+@media only screen and (min-width: 801px) {
+	/** DESKTOPS */
+	
+	#header {
+		height: 80px;
+	}
+
+	#siteLogo {
+		width: 80px;
+	}
+
+	#site-info-wrap {
+		margin-left: 10px;
+	}
+
+	#site-info-wrap p.site-title {
+		font-size: 1.75em;
+		font-weight: 700;
+		display: inline;
+	}
+
+	#site-info-wrap p.site-tagline {
+		font-size: 1em;
+		font-weight: 500;
+		display: inline;
+	}
+
+	.overlay a:hover {
+		background-color: #718096;
+		color: black;
+	}
+
+	#main {
+		margin-top: 80px;
+		font-size: 1.5em;
+	}
+	
+	article.category-list {
+		max-width: 48%;
+	}
+
+	#category-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.reader-bar-start #main {
+		margin-top: 90px;
+	}
+	
+	.post-summary {
+		font-size: 1.5em;
+	}
+}
+
+
+/** This applies to devices whose screens
+ * are a MAXIMUM of 768px wide */
+@media only screen and (max-width: 800px) {
+	/** MOBILES and tablets */
+	
+	#siteLogo {
+		width: 40px;
+		height: 40px;
+	}
+
+	#site-info-wrap {
+		margin-left: 10px;
+	}
+	
+	.overlay a {
+		display: none;
+	  }
+
+	  .overlay a.icon {
+		float: right;
+		display: block;
+	  }
+
+	  span.closer {
+		  display: none;
+	  }
+
+	.overlay.touched {   
+		height: 100%;
+		width: 100%;
+		padding-top: 5px;
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+		background-color: rgb(0,0,0); /* Black fallback color */
+		background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+		overflow-x: hidden; /* Disable horizontal scroll */
+		transition: .5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	}
+
+	.overlay.touched span.closer {
+		display: block;
+	}
+
+	.overlay.touched .overlay-content, .overlay.touched .overlay-content a {
+		display: block;
+		color: white;
+		width: 100px;
+		height: 100px;
+		float: right;
+	}
+	
+	p.site-title {
+		font-size: 1.25em;
+		display: inline;
+	}
+	p.site-tagline {
+		font-size: 0.75em;
+		display: inline;
+	}
+	#main {
+		margin-top: 40px;
+		font-size: 1.25em;
+	}
+
+	.reader-bar-start #main {
+		margin-top: 50px;
+	}
+	
+	.faded-featured-inner::after {
+		display: block;
+		position: relative;
+		background-image: linear-gradient(to bottom, transparent 0%, white 100%);
+		margin-top: -150px;
+		height: 150px;
+		width: 100%;
+		content: '';
+	  }
+}
+
+@media only screen and ( max-width: 800px ) and ( min-width: 425px ) {
+	p.site-title {
+		font-size: 2em;
+		display: inline;
+	}
+	p.site-tagline {
+		font-size: 1.25em;
+		display: inline;
+	}
+}

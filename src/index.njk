@@ -1,0 +1,46 @@
+---
+permalink: /
+---
+{% extends "layouts/layout.njk" %}
+{%- block htmlTitle %}Bearded Dragons Rock - How To Care For Your Bearded Dragon{%- endblock %}
+{% block content %}
+<div class="cover-block hero">
+    <h1 class="is-text-centered is-white">Demo 11ty Site From WP-GraphQL</h1><h2 class="is-text-centered is-white no-inject">Create A Static Site From WordPress</h2>
+    <div>
+    <p class="is-white">
+        You can create your own static site from WordPress GraphQL using this fairly comprehensive set of 11ty scripts.
+    </p>
+    <p class="is-white">
+        This set of scripts will pull data from categories, recent posts and individual posts using WP-GraphQL, and
+        will rewrite images within the individual articles (as well as automatically rewriting featured images). Any URL links
+        internally will be rewritten to have the site portion of the URL removed.
+    </p>
+    <p class="is-white">
+        You will certainly want to edit this front page / index template to suit your needs. You could delete it altogether
+        and just have the recent posts as your front page if you like. To do that, remove this njk template and set the
+        permalink in the front matter of most-recent.njk to be /{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}/{% endif %}index.html
+        <b>This template is found in src/index.njk</b>
+    </p>
+    </div>
+</div>
+<div id="post-content" class="content">
+    <h2 class="is-text-centered">More content demo here</h2>
+    <p>
+        Tha's getten tha'self in a pickle there lass. Yer couldn't organise a set of fat bobbies. Am proper knackered, aye I am that is I say. Theers nowt s'queer as folk. Now then, do as thy says, not as thy does. Put wood inth 'ole, Off f'r a sup down t'pub, to'neet. Tha's better bi careful, lass - yer on a Scarborough warning! Just nipping t' lavvy. I'm off down't road, I'm flaggin'. Were ya born in a barn, lad? Aye, 'is as daft as a brush, lad! I'll do it missen By eckers, well, I'll go to't foot of't stairs! Off f'r a sup down t'pub, to'neet. Aye up lass. By eckers, well, I'll go to't foot of't stairs! Aye up, she's a reight bobby dazzler. Now then, do as thy says, not as thy does.
+
+        Tha meks a better door than a winder. Am proper knackered, aye I am that is I say. Put it on t'table I've got nowt to do today, I need summat to do. Oh aye! Aye, 'is as daft as a brush, lad! If in doubt-do nowt! Yer flummoxed. I'll do it missen.
+    </p>
+    <p>
+        Now then, do as thy says, not as thy does. I've got nowt to do today, I need summat to do. Oh aye! He's a wrong'un like, Put it on t'table Tha's getten tha'self in a pickle there lass. Do I 'eckers like, Ee bye ecky thump! Put wood inth 'ole, Am proper knackered, aye I am that is I say. If in doubt-do nowt! You're in luck m'boy!
+
+        Put wood inth 'ole, Ee, stop yer faffing about, lass! Tha's getten tha'self in a pickle there lass. Aye up, she's a reight bobby dazzler. Oh aye! Owt goin' on today lad, bes' be goin' yam. Just nipping t' lavvy. Aye up lass. Wash tha' mouth out, tha's goin' doolally. He's a wrong'un like, Tha's better bi careful, lass - yer on a Scarborough warning! Oh aye! Owt goin' on today lad, bes' be goin' yam. Ear all, see all, say nowt. Eat all, sup all, pay nowt.
+
+
+    </p>
+    <p>
+        Random Yorkshire ipsum from https://wordwheels.co.uk/LoremIpsum/Yorkshire-Ipsum
+    </p>
+</div>
+{% include "partials/important-topics.njk" %}
+{% endblock %}
+

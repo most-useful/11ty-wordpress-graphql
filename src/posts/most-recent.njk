@@ -1,0 +1,43 @@
+---
+pagination:
+  data: posts
+  size: 10
+permalink: most-recent-posts{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}{% endif %}/index.html
+siteTitle: "Bearded Dragons Rock"
+---
+
+{% extends "layouts/layout.njk" %}
+
+{% block htmlTitle %}{{siteTitle}} || Page {{pagination.pageNumber + 1 }}{% endblock %}
+{%- block metaDescription %}{{siteTitle}} most recent posts page {{pagination.pageNumber + 1}}{%- endblock %}
+{% block content %}
+  <h1 class="page-title">Recent Posts {% if pagination.pageNumber > 0 %}Page {{pagination.pageNumber + 1}}{% endif %}</h1>
+
+  {# loop through paginated item #}
+  {% for item in pagination.items %}
+      <article class="post-entry">
+        <a href="/{{item.slug}}.html">
+          {% image item.image, item.imageAlt, "(max-width: 300px) 300px, (max-width: 600px) 600px, 100vw" %}
+        </a>
+        <div class="post-data">
+          <h2 class="post-title"><a class="post-title" href="/{{item.slug}}.html">{{ item.title | safe }}</a></h2>
+          <time class="post-time" datetime="{{ item.date | date('YYYY-MM-DD') }}">{{ item.date|date("dddd, Do MMMM YYYY") }}</time>
+          <div class="post-summary">{{ item.summary | safe }}</div>
+          <p><a class="more" href="/{{item.slug}}.html">Read More &rArr;</a></p>
+        </div>
+      </article>
+  {% endfor %}
+
+  {# pagination #}
+  {% if pagination.hrefs | length > 0 %}
+  <div id="pagination">
+    {% if pagination.previousPageHref %}
+      <a class="button" href="{{ pagination.previousPageHref }}">Previous page</a></li>
+    {% endif %}
+    {% if pagination.nextPageHref %}
+      <a class="button" href="{{ pagination.nextPageHref }}">Next page</a></li>
+    {% endif %}
+  </div>
+  {% endif %}
+
+{% endblock %}

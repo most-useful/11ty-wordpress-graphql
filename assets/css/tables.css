@@ -1,0 +1,39 @@
+/** CSS For when a post contains a table */
+/** Not overly keen on leaking that this is from a WP headless CMS but it's easier than restyling everything */
+
+.wp-block-table {
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+.wp-block-table table {
+    border-collapse: collapse;
+}
+
+.wp-block-table .has-fixed-layout {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.wp-block-table .has-fixed-layout td, .wp-block-table .has-fixed-layout th {
+    word-break: break-word;
+}
+
+.wp-block-table td, .wp-block-table th {
+    padding: .5em;
+    border: 1px solid #999;
+    word-break: normal;
+}
+
+.has-text-align-center {
+    text-align: center;
+}
+
+.wp-block-table td, .wp-block-table th {
+    padding: .5em;
+    border: 1px solid #999;
+    word-break: normal;
+}
+
+.wp-block-table thead {
+    border-bottom: 3px solid black;
+}
