@@ -224,6 +224,12 @@ async function requestPosts() {
     const postsFormatted = posts.map(item => {
         item.excerpt = item.excerpt.replace('<p>', '');
         item.excerpt = item.excerpt.replace('</p>', ''); // Would prefer excerpt as RAW format but need login for that
+        if ( item.featuredImage == null || item.featuredImage.node == null ) {
+            item.featuredImage = new Object();
+            item.featuredImage.node = new Object();
+            item.featuredImage.node.sourceUrl = "./assets/images/default-featured-image.png";
+            item.featuredImage.node.altText = "Default Featured Image";
+        }
         return {
             id: item.id,
             date: item.modified,

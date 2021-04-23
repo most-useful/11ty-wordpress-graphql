@@ -91,11 +91,23 @@ async function getIndividualCategoryListings() {
     
         // Format posts for returning
         const categoryPostsFormatted = categoryPosts.map((item) => {
+            var postsSanitized = null;
+            if ( item.posts != null ) {
+                postsSanitized = item.posts.nodes.map((post) => {
+                    if ( post.featuredImage == null || post.featuredImage.node == null ) {
+                        post.featuredImage = new Object();
+                        post.featuredImage.node = new Object();
+                        post.featuredImage.node.sourceUrl = "./assets/images/default-featured-image.png";
+                        post.featuredImage.node.altText = "Default Featured Image";
+                    }
+                    return post;
+                })
+            }
             return {
                 id: item.categoryId,
                 categoryName: item.name,
                 categorySlug: item.slug,
-                posts: item.posts.nodes
+                posts: postsSanitized
             };
         });
     

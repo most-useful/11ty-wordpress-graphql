@@ -35,7 +35,7 @@ module.exports = (eleventyConfig, options = {}) => {
     return {
         dir: {
             input: "src",
-            output: public_html
+            output: "public_html"
         },
         passthroughFileCopy: true
     }
